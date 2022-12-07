@@ -40,7 +40,10 @@ unsigned long valid[] = {
 547871,
 550331,
 532865,
-528706};
+528706,
+529942,
+525614,
+584376};
 int max = sizeof(valid) / sizeof(unsigned long);
 void setup() {
   // put your setup code here, to run once:
