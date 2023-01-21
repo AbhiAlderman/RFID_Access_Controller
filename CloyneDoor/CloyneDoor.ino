@@ -2,7 +2,6 @@
 const int relay = 2;
 String receive;
 unsigned long valid[] = {
-531303,
 552797,
 501486,
 576110,
@@ -46,7 +45,20 @@ unsigned long valid[] = {
 552797,
 536486,
 547871,
-561379};
+561379,
+531013,
+531335,
+548831,
+498804,
+532865,
+532362,
+546669,
+589858,
+545136,
+557993,
+593340,
+590087,
+531303};
 int max = sizeof(valid) / sizeof(unsigned long);
 void setup() {
   // put your setup code here, to run once:
