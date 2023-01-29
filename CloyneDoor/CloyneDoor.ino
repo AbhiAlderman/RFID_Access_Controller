@@ -58,6 +58,10 @@ unsigned long valid[] = {
 557993,
 593340,
 590087,
+544745,
+552890,
+587330,
+532770,
 531303};
 int max = sizeof(valid) / sizeof(unsigned long);
 void setup() {
