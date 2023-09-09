@@ -1,6 +1,6 @@
 
 const int relay = 2;
-String receive;
+String receive; // Consider changing this to a byte array!
 unsigned long valid[] = {
 552797,
 501486,
@@ -77,12 +77,13 @@ void setup() {
 
 
 bool validateInput(String hex) {
+  Serial.println("hex: " + hex); // 000C6551970C65
   char * pEnd;
   unsigned long num = strtol (hex.substring(6, 12).c_str(), &pEnd, 16);
-  Serial.println(num);
+  Serial.println(num);           // 5347084
   unsigned long mask = 0b000111111111111111111110;
   num = (num & mask) >> 1;
-  Serial.println(num);
+  Serial.println(num);           // 576390
   for (int i = 0; i < max; i++) {
     if (valid[i] == num) {
       Serial.println("Valid code!");
@@ -97,8 +98,9 @@ bool validateInput(String hex) {
 void loop() {
   
   if(Serial.available() > 0) {
-    receive = Serial.readString();
-    Serial.println(receive);
+
+    receive = Serial.readString(); // use Serial.read() instead!
+    Serial.println(receive); // 000C6551970C65
     if (validateInput(receive)) {
       digitalWrite(relay, HIGH);
       delay(100);
