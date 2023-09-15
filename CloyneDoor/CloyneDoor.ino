@@ -99,13 +99,38 @@ void loop() {
   
   if(Serial.available() > 0) {
 
-    receive = Serial.readString(); // use Serial.read() instead!
-    Serial.println(receive); // 000C6551970C65
-    if (validateInput(receive)) {
-      digitalWrite(relay, HIGH);
-      delay(100);
-      digitalWrite(relay, LOW);
-    }
+    // Byte Array?:
+    
+    receive = Serial.read();
+    Serial.println(receive);
+    /**
+    48
+    48
+    48
+    67
+    54
+    53
+    53
+    49
+    57
+    55
+    48
+    67
+    54
+    53
+    13
+    10
+    */
+
+    // String:
+    //
+    // receive = Serial.readString(); // use Serial.read() instead!
+    // Serial.println(receive); // 000C6551970C65
+    // if (validateInput(receive)) {
+    //   digitalWrite(relay, HIGH);
+    //   delay(100);
+    //   digitalWrite(relay, LOW);
+    // }
     delay(100);
   }
   
