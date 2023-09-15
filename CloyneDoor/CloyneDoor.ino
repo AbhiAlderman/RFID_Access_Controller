@@ -104,6 +104,7 @@ void loop() {
     receive = Serial.read();
     Serial.println(receive);
     /**
+    (these are ints)
     48
     48
     48
