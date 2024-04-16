@@ -37,14 +37,8 @@ unsigned long valid[] = {
 567758,
 606923,
 625920,
-617489,
-531110,
-554582,
-575697,
 576390,
-584376,
-631678,
-581821,
+634141,
 };
 int max = sizeof(valid) / sizeof(unsigned long);
 
@@ -76,7 +70,6 @@ bool validateInput(String hex) {
   unsigned long num = strtol (hex.substring(6, 12).c_str(), &pEnd, 16);
   Serial.println(num);
   unsigned long mask = 0b000111111111111111111110;
-  num = (num & mask) >> 1;
   num = (num & mask) >> 1;
   Serial.println(num);
   for (int i = 0; i < max; i++) {
