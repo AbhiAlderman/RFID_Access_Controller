@@ -48,7 +48,7 @@ int max = sizeof(valid) / sizeof(unsigned long);
 
 unsigned long myTime; // Millis() function time value
 unsigned long elapsedTime;
-unsigned long timeExpected = 5000UL; // Is in milliseconds. So rn its every 5 seconds
+unsigned long timeExpected = 30000UL; // Is in milliseconds. So rn its every 30 seconds
 const int RESET_PIN = 2; // Reset pin's connection
 
 void setup() {
